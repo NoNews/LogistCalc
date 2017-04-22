@@ -1,12 +1,14 @@
 package ru.techmas.logistCalc.activities
 
 import android.os.Bundle
+import android.view.Menu
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.example.reg.androidKotlinTemplate.mvp.views.MainActivityView
 import kotlinx.android.synthetic.main.activity_main.*
 import ru.techmas.logistCalc.R
 import ru.techmas.logistCalc.adapters.ViewPagerAdapter
-import ru.techmas.logistCalc.fragments.BaseTabFragment
+import ru.techmas.logistCalc.fragments.tabs.BaseTabFragment
+import ru.techmas.logistCalc.fragments.tabs.CarsTabFragment
 import ru.techmas.logistCalc.fragments.tabs.DriversTabFragment
 import ru.techmas.logistCalc.mvp.presenters.MainActivityPresenter
 
@@ -22,6 +24,7 @@ class MainActivity : BaseActivity(), MainActivityView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(LAYOUT)
+        setSupportActionBar(toolbar)
         setupUI()
     }
 
@@ -38,7 +41,7 @@ class MainActivity : BaseActivity(), MainActivityView {
     private fun getFragments(): HashMap<Int, BaseTabFragment> {
         val fragments = HashMap<Int, BaseTabFragment>()
         fragments.put(0, DriversTabFragment.newInstance(this))
-        fragments.put(1, DriversTabFragment.newInstance(this))
+        fragments.put(1, CarsTabFragment.newInstance(this))
         fragments.put(2, DriversTabFragment.newInstance(this))
         fragments.put(3, DriversTabFragment.newInstance(this))
         fragments.put(4, DriversTabFragment.newInstance(this))
@@ -46,4 +49,10 @@ class MainActivity : BaseActivity(), MainActivityView {
         return fragments
     }
 
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 }

@@ -7,4 +7,6 @@
     <string name="tab_cars">Автомобили</string>
     <string name="tab_tarifs">Тарифы</string>
     <string name="tab_order_calculate">Рассчёт поездки</string>
+    <string name="main_menu_settings">Настройки</string>
+    <string name="main_menu_about">О приложении</string>
 </resources>

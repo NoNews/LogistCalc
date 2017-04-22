@@ -1,4 +1,6 @@
-package ru.techmas.logistCalc.fragments
+package ru.techmas.logistCalc.fragments.tabs
+
+import ru.techmas.logistCalc.fragments.BaseFragment
 
 /**
  * Date: 22.04.2017

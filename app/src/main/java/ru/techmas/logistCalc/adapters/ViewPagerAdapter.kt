@@ -3,7 +3,7 @@ package ru.techmas.logistCalc.adapters
 import android.content.Context
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentStatePagerAdapter
-import ru.techmas.logistCalc.fragments.BaseTabFragment
+import ru.techmas.logistCalc.fragments.tabs.BaseTabFragment
 
 /**
  * Date: 22.04.2017
