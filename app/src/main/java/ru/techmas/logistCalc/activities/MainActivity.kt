@@ -2,9 +2,11 @@ package ru.techmas.logistCalc.activities
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.example.reg.androidKotlinTemplate.mvp.views.MainActivityView
 import kotlinx.android.synthetic.main.activity_main.*
+
 import ru.techmas.logistCalc.R
 import ru.techmas.logistCalc.adapters.ViewPagerAdapter
 import ru.techmas.logistCalc.fragments.tabs.BaseTabFragment
@@ -55,4 +57,14 @@ class MainActivity : BaseActivity(), MainActivityView {
         inflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item!!.itemId) {
+            R.id.menuAbout -> showActivity<AboutAppActivity>()
+            R.id.menuSettings -> showActivity<SettingsActivity>()
+        }
+        return true
+    }
+
+
 }

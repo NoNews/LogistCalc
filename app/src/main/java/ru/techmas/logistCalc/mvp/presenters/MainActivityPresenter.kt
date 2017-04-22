@@ -16,4 +16,6 @@ import com.example.reg.androidKotlinTemplate.mvp.views.MainActivityView
 class MainActivityPresenter : BasePresenter<MainActivityView>() {
 
 
+
+
 }

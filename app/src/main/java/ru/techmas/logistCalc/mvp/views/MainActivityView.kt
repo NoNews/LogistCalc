@@ -12,5 +12,4 @@ package com.example.reg.androidKotlinTemplate.mvp.views
 
 interface MainActivityView : BaseView {
 
-
 }
