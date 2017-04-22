@@ -17,7 +17,7 @@ open class BaseActivity : MvpAppCompatActivity() {
     }
 
 
-    protected fun setupBackButton(toolbar: Toolbar) {
+    protected open fun setupBackButton(toolbar: Toolbar) {
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener { finish() }
@@ -28,7 +28,13 @@ open class BaseActivity : MvpAppCompatActivity() {
         overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
     }
 
-    override final fun finish() {
+    inline public fun <reified T : Activity> showActivityWithTransition() {
+        startActivity(Intent(this, T::class.java))
+        overridePendingTransition(R.anim.move_right_in_activity, R.anim.move_left_out_activity)
+    }
+
+
+    override open fun finish() {
         super.finish()
         overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
     }

@@ -1,11 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
     tools:context="ru.techmas.logistCalc.activities.NewDriverActivity">
 
     <include layout="@layout/toolbar"/>
 
-</android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/ltFullName"
+        style="@style/FieldContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_full_name"
+        />
+
+        <TextView
+            android:id="@+id/tvFullName"
+            style="@style/FieldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Иванов Сергей Павлович"
+        />
+
+    </LinearLayout>
+
+    <include layout="@layout/separate_line"/>
+
+
+    <LinearLayout
+        android:id="@+id/ltPassport"
+        style="@style/FieldContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_passport"
+        />
+
+        <TextView
+            android:id="@+id/tvPassport"
+            style="@style/FieldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="147 653 365554, Северстальским УВД по г.М...."
+        />
+
+    </LinearLayout>
+
+    <include layout="@layout/separate_line"/>
+
+
+    <LinearLayout
+        android:id="@+id/ltDriverCard"
+        style="@style/FieldContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_driver_card"
+        />
+
+        <TextView
+            android:id="@+id/tvDriverCard"
+            style="@style/FieldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="147 6533 66651 от 20.20.1999"
+        />
+
+    </LinearLayout>
+
+    <include layout="@layout/separate_line"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/ltPhone"
+        style="@style/FieldContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/FieldLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_phone"
+        />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            style="@style/FieldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+7 999 999 999"
+        />
+
+    </LinearLayout>
+
+    <include layout="@layout/separate_line"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="@string/save"
+        />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
