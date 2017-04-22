@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.view.View
 import com.arellomobile.mvp.MvpAppCompatFragment
+import ru.techmas.logistCalc.R
 
 open class BaseFragment : MvpAppCompatFragment() {
 
@@ -16,5 +17,7 @@ open class BaseFragment : MvpAppCompatFragment() {
 
     inline public fun <reified T : Activity> showActivity() {
         startActivity(Intent(context, T::class.java))
+        activity.overridePendingTransition(R.anim.no_animation, R.anim.no_animation)
     }
+
 }
