@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">LogistCalc</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_drivers">Водители</string>
+    <string name="tab_cars">Автомобили</string>
+    <string name="tab_tarifs">Тарифы</string>
+    <string name="tab_order_calculate">Рассчёт поездки</string>
 </resources>
