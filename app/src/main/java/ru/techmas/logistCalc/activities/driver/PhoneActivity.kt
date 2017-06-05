@@ -38,4 +38,8 @@ class PhoneActivity : BaseFieldActivity() {
         toolbar.title = getString(R.string.activity_phone)
         setupBackButton(toolbar)
     }
+
+
+    public fun doTest(){
+    }
 }
